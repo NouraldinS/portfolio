@@ -1,0 +1,10 @@
+version: '1.0'
+services:
+  client:
+    build:
+      context: ./client
+    image: docker-client-i
+    ports:
+      - "3000:3000"
+    container_name: portfolio_client
+    stdin_open: true
