@@ -5,10 +5,8 @@ import { RevealGrid, ImgLink } from '..';
 import { CONTACT_ME_GRID, MY_LINKEDIN, MY_GITHUB } from '../../constants';
 
 import './index.less';
-import useRevealGrid from 'hooks/useRevealGrid';
 
 const Hireme = (props) => {
-	const [stage, setStage] = useRevealGrid(0);
 	const [revealGridStage, setRevealGridStage] = useState(0);
 	const [hasMouseEnter, setMouseEnter] = useState(false);
 	useEffect(() => {
