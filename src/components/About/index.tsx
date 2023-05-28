@@ -1,4 +1,5 @@
 import React from 'react';
+import FuturisticPortalBackground from '../FuturisticPortalBackground';
 
 const aboutMe = `
 I'm an experienced Frontend Engineer, focused on ReactJS and well versed in libraries and frameworks that work with it.
@@ -8,14 +9,16 @@ Highly communicative, both with less experienced developers to help them better 
 `;
 
 const About = () => (
-  <div id="about" className="w-1/2 mx-auto pt-52 h-screen snap-start">
-    <div className="text-xl text-cold-200 mb-4">
-      About me
+  <FuturisticPortalBackground>
+    <div id="about" className="w-1/2 mx-auto pt-52 h-screen snap-start">
+      <div className="text-xl text-cold-200 mb-4">
+        About me
+      </div>
+      <div className="text-lg text-hot-400 whitespace-break-spaces">
+        {aboutMe}
+      </div>
     </div>
-    <div className="text-lg text-hot-400 whitespace-break-spaces">
-      {aboutMe}
-    </div>
-  </div>
+  </FuturisticPortalBackground>
 );
 
 export default About;

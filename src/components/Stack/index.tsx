@@ -32,49 +32,49 @@ const icons = [
   {
     title: 'Frameworks and Libraries',
     items: [
-      <ReactIcon />,
-      <NextjsIcon />,
-      <TypescriptIcon />,
-      <NodeJsIcon />,
-      <ExpressjsIcon />,
+      { component: <ReactIcon />, name: 'ReactIcon' },
+      { component: <NextjsIcon />, name: 'NextjsIcon' },
+      { component: <TypescriptIcon />, name: 'TypescriptIcon' },
+      { component: <NodeJsIcon />, name: 'NodeJsIcon' },
+      { component: <ExpressjsIcon />, name: 'ExpressjsIcon' },
     ],
   }, {
     title: 'State management',
     items: [
-      <ReduxIcon />,
-      <MobxIcon />,
+      { component: <ReduxIcon />, name: 'ReduxIcon' },
+      { component: <MobxIcon />, name: 'MobxIcon' },
     ],
   }, {
     title: 'API Architecture',
     items: [
-      <GraphqlIcon />,
-      <RestAPIIcon />,
+      { component: <GraphqlIcon />, name: 'GraphqlIcon' },
+      { component: <RestAPIIcon />, name: 'RestAPIIcon' },
     ],
   }, {
     title: 'Tools',
     items: [
-      <GitIcon />,
-      <QueryIcon />,
-      <TailwindcssIcon />,
-      <WebpackIcon />,
-      <FirebaseIcon />,
-      <GanalyticsIcon />,
-      <GmapsIcon />,
-      <ApolloIcon />,
-      <MongodbIcon />,
-      <PostgresqlIcon />,
-      <StripeIcon />,
-      <SassIcon />,
-      <DebianIcon />,
-      <LinuxIcon />,
-      <CssIcon />,
-      <HtmlIcon />,
+      { component: <GitIcon />, name: 'GitIcon' },
+      { component: <QueryIcon />, name: 'QueryIcon' },
+      { component: <TailwindcssIcon />, name: 'TailwindcssIcon' },
+      { component: <WebpackIcon />, name: 'WebpackIcon' },
+      { component: <FirebaseIcon />, name: 'FirebaseIcon' },
+      { component: <GanalyticsIcon />, name: 'GanalyticsIcon' },
+      { component: <GmapsIcon />, name: 'GmapsIcon' },
+      { component: <ApolloIcon />, name: 'ApolloIcon' },
+      { component: <MongodbIcon />, name: 'MongodbIcon' },
+      { component: <PostgresqlIcon />, name: 'PostgresqlIcon' },
+      { component: <StripeIcon />, name: 'StripeIcon' },
+      { component: <SassIcon />, name: 'SassIcon' },
+      { component: <DebianIcon />, name: 'DebianIcon' },
+      { component: <LinuxIcon />, name: 'LinuxIcon' },
+      { component: <CssIcon />, name: 'CssIcon' },
+      { component: <HtmlIcon />, name: 'HtmlIcon' },
     ],
   }, {
     title: 'Testing',
     items: [
-      <CucumberIcon />,
-      <JestjsioIcon />,
+      { component: <CucumberIcon />, name: 'CucumberIcon' },
+      { component: <JestjsioIcon />, name: 'JestjsioIcon' },
     ],
   },
 ];
@@ -84,10 +84,10 @@ const Stack = () => (
     <div className="text-xl text-cold-200 mb-4">My Stack</div>
     <div className="gap-4 bg-mainFg p-8 rounded-xl">
       {icons.map((group) => (
-        <div className="mb-8">
+        <div className="mb-8" key={group.title}>
           <div className="mb-4">{group.title}</div>
           <div className="flex gap-8 flex-wrap">
-            {group.items.map((icon) => <div className="min-w-[8rem] max-w-[10rem] max-h-[10rem] flex items-center overflow-hidden">{icon}</div>)}
+            {group.items.map((icon) => <div key={icon.name} className="min-w-[8rem] max-w-[10rem] max-h-[10rem] flex items-center overflow-hidden">{icon.component}</div>)}
           </div>
         </div>
       ))}

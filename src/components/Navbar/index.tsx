@@ -15,12 +15,15 @@ const links = [
   },
 ];
 
-const NavbarLink = ({ href, children, target }: { href: string; children: React.ReactNode; target?: '_blank' }) => (
+const NavbarLink = ({
+  href, children, target, download,
+}: { href: string; children: React.ReactNode; target?: '_blank', download?: string }) => (
   <a
     href={href}
     className="flex p-4 hover:text-hot-400 transition-all"
     rel="noreferrer"
     target={target}
+    download={download}
   >
     {children}
   </a>
@@ -33,6 +36,7 @@ const Navbar = () => (
       <NavbarLink href="#about">About</NavbarLink>
       <NavbarLink href="#work">Work</NavbarLink>
       <NavbarLink href="#contact">Contact</NavbarLink>
+      <NavbarLink href="/resume.pdf" download="NouraldinAlsweirkiCV.pdf">Download Resume</NavbarLink>
       <div className="flex justify-between items-center gap-1 text-mainFg">
         {
             links.map((item) => (

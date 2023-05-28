@@ -1,8 +1,11 @@
-import React, { useEffect, useId, useRef } from 'react';
+import React, {
+  PropsWithChildren, useEffect, useId, useRef,
+} from 'react';
 import { degToRad, drawStar, randomBetween } from '../../helpers/draw';
 import Particle from '../../helpers/draw/particle';
+import RelativeBackground from '../RelativeBackground';
 
-const SpaceBackground = () => {
+const SpaceBackground: React.FC<PropsWithChildren> = ({ children }) => {
   const id = useId();
   const ref = useRef<HTMLCanvasElement>(null);
 
@@ -54,7 +57,10 @@ const SpaceBackground = () => {
     }
   }, []);
   return (
-    <canvas ref={ref} id={`space-background-${id}`} className="absolute inset-0 w-full h-full pointer-events-none" />
+    <RelativeBackground>
+      {children}
+      <canvas ref={ref} id={`space-background-${id}`} className="absolute inset-0 w-full h-full pointer-events-none" />
+    </RelativeBackground>
   );
 };
 

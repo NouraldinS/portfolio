@@ -6,6 +6,7 @@ module.exports = {
       animation: {
         float: 'float 20s linear infinite',
         wave: 'wave 20s linear infinite',
+        rotate3d: 'rotate3d 20s ease infinite',
       },
     },
     colors: {

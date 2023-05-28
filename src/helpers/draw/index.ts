@@ -108,3 +108,10 @@ export const randomPointOnEllipse = (a: number, b: number): [number, number] => 
   const y = Math.sqrt(b ** 2 * (1 - (x ** 2 / a ** 2)));
   return [x + a, y + b];
 };
+
+export const parseHexColor = (hex: number) => {
+  const red = (hex >> 16) & 255;
+  const green = (hex >> 8) & 255;
+  const blue = hex & 255;
+  return [red, green, blue];
+};

@@ -25,15 +25,16 @@ const Hero = () => {
   }, 30);
 
   return (
-    <div className="h-screen flex justify-center items-center flex-col text-4xl gap-10 text-cold-200 relative snap-start">
-      <ParticleContainer particle={mainParticle}>Frontend Engineer</ParticleContainer>
-      <span className="text-2xl flex items-center gap-1 animate-float" style={{ animationDelay: '6000ms' }}>
-        <FontAwesomeIcon icon={faReact} />
-        {' '}
-        React Specialist
-      </span>
-      <SpaceBackground />
-    </div>
+    <SpaceBackground>
+      <div className="h-screen flex justify-center items-center flex-col text-4xl gap-10 text-cold-200 snap-start">
+        <ParticleContainer particle={mainParticle}>Frontend Engineer</ParticleContainer>
+        <span className="text-2xl flex items-center gap-1 animate-float" style={{ animationDelay: '6000ms' }}>
+          <FontAwesomeIcon icon={faReact} />
+          {' '}
+          React Specialist
+        </span>
+      </div>
+    </SpaceBackground>
   );
 };
 
