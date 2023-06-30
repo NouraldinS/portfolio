@@ -115,3 +115,7 @@ export const parseHexColor = (hex: number) => {
   const blue = hex & 255;
   return [red, green, blue];
 };
+
+export const timeToPercent = (t: number) => Math.abs(Math.sin(t));
+
+export const easeInQuad = (x: number) => x * x;

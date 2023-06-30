@@ -9,6 +9,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-three/fiber": "^8.13.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,6 +17,7 @@
     "@types/node": "^16.18.24",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
+    "@types/three": "^0.152.1",
     "antd": "^5.4.6",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
@@ -23,6 +25,7 @@
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
     "sass": "^1.62.1",
+    "three": "^0.154.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },

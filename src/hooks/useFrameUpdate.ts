@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 const useFrameUpdate = <Result = void>(
-  func: () => Result,
-  framerate: number,
-  dependencies?: unknown[],
+  func: (() => Result) = (() => undefined as Result),
+  framerate: number = 60,
+  dependencies: unknown[] = [],
 ) => {
   const [, setTimestamp] = useState(() => (new Date()).getTime());
   const [value, setValue] = useState<Result>(func);

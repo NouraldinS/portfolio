@@ -50,7 +50,6 @@ code {
 									   color-stop(0.86, rgb(28,58,148)));
 }
 
-
 @keyframes wave {
   0% {
     transform: translateY(0) rotate(0deg);
